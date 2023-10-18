@@ -1,0 +1,62 @@
+==> mode 8: testing ok() (should abort)
+
+G=Ya:(G=Ne:(G=Fojui:(<Be:234><Co:473><Fojui:695>)
+-----|-----|G=He:(<Hacrege:863><He:650>)
+-----|-----|G=Ne:(<Me:620><Ne:536>)
+-----|G=Skeoxa:(G=Plo:(<Nociori:192><Plo:904>)
+-----|---------|G=Skeoxa:(<Qubespuqagra:820><Skeoxa:500>)
+-----|G=Ya:(G=Spu:(<Sno:490><Spu:600>)
+-----|-----|G=Ya:(<Titwi:377><Ya:624>)
+
+ISSORTED: child[i-1].guide=Ne
+          child[i].guide=Skeoxa
+ISSORTED: child[i-1].guide=Skeoxa
+          child[i].guide=Ya
+ISSORTED: child[i-1].guide=Fojui
+          child[i].guide=He
+ISSORTED: child[i-1].guide=He
+          child[i].guide=Ne
+ISSORTED: child[i-1].guide=Be
+          child[i].guide=Co
+ISSORTED: child[i-1].guide=Co
+          child[i].guide=Fojui
+ISSORTED: child[i-1].guide=Hacrege
+          child[i].guide=He
+ISSORTED: child[i-1].guide=Me
+          child[i].guide=Ne
+ISSORTED: child[i-1].guide=Plo
+          child[i].guide=Skeoxa
+ISSORTED: child[i-1].guide=Nociori
+          child[i].guide=Plo
+ISSORTED: child[i-1].guide=Qubespuqagra
+          child[i].guide=Skeoxa
+ISSORTED: child[i-1].guide=Spu
+          child[i].guide=Ya
+ISSORTED: child[i-1].guide=Sno
+          child[i].guide=Spu
+ISSORTED: child[i-1].guide=Titwi
+          child[i].guide=Ya
+after messUpTree(10) -- it should abort!
+G=Ya:(G=Ne:(G=Fojui:(<Fojui:695><Co:473><Be:234>)
+-----|-----|G=He:(<Hacrege:863><He:650>)
+-----|-----|G=Ne:(<Me:620><Ne:536>)
+-----|G=Skeoxa:(G=Plo:(<Nociori:192><Plo:904>)
+-----|---------|G=Skeoxa:(<Qubespuqagra:820><Skeoxa:500>)
+-----|G=Ya:(G=Spu:(<Sno:490><Spu:600>)
+-----|-----|G=Ya:(<Titwi:377><Ya:624>)
+
+ISSORTED: child[i-1].guide=Ne
+          child[i].guide=Skeoxa
+ISSORTED: child[i-1].guide=Skeoxa
+          child[i].guide=Ya
+ISSORTED: child[i-1].guide=Fojui
+          child[i].guide=He
+ISSORTED: child[i-1].guide=He
+          child[i].guide=Ne
+Exception in thread "main" java.lang.AssertionError: children are not sorted
+	at InternalNode.isSorted(InternalNode.java:245)
+	at Tree23.ok(Tree23.java:551)
+	at Tree23.ok(Tree23.java:557)
+	at Tree23.ok(Tree23.java:557)
+	at Tree23.ok(Tree23.java:545)
+	at Tree23.main(Tree23.java:612)
